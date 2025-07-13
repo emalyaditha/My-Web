@@ -22,130 +22,148 @@
 
   <body class="text-white font-sans">
     <!-- Hero Section -->
-    <section class="py-20 px-6">
+    <section class="min-h-screen bg-black text-white font-sans py-20 px-6">
       <div
-        class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12"
+        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16 bg-[#0d0d0d] p-10 rounded-3xl shadow-2xl relative overflow-hidden"
       >
-        <!-- Profile Picture - Box Style
-        <div class="w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
-          <img
-            src="./Img/Emal.png"
-            alt="Emal Yaditha"
-            class="w-full h-full object-cover rounded-lg shadow-xl border-2 border-gray-700 hover:border-blue-400 transition-all duration-300"
-          />
-        </div> -->
-        <div class="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
-          <!-- Starry Background -->
-          <div
-            class="absolute inset-0 rounded-lg bg-gradient-to-br from-gray-900 to-gray-800 overflow-hidden"
+        <!-- Left: Text & CTA -->
+        <div class="flex-1">
+          <div class="text-sm text-gray-300 mb-2 flex items-center gap-2">
+            <span>👋</span>
+            <span>Hey, I’m <strong class="text-white">Emal.</strong></span>
+          </div>
+          <h1
+            class="text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-6"
           >
-            <!-- Static + Twinkling Stars -->
+            <span class="text-blue-500">Building</span> scalable solutions,<br />
+            one line of code at a<br />
+            <span class="text-blue-500">time.</span>
+          </h1>
+          <p class="text-lg text-gray-400 mb-6">
+            Hey, I am a Software Engineer with over 2 years of experience
+            building and supporting innovative software solutions. My passion
+            lies in crafting scalable and efficient systems, driven by my
+            never-giving-up attitude and excellent communication skills.
+          </p>
+          <!-- CTA Buttons -->
+          <div class="flex gap-3">
+            <a
+              href="https://linkedin.com/in/emalyaditha"
+              class="border border-gray-600 px-4 py-2 rounded-lg hover:bg-gray-800 transition"
+              >in</a
+            >
+            <a
+              href="https://github.com/emalyaditha"
+              target="_blank"
+              class="border border-gray-600 px-4 py-2 rounded-lg hover:bg-gray-800 transition flex items-center gap-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0C5.37 0 0 5.373 0 12a12.01 12.01 0 0 0 8.207 11.387c.6.113.82-.263.82-.582v-2.1c-3.338.727-4.042-1.612-4.042-1.612-.546-1.385-1.332-1.754-1.332-1.754-1.09-.745.083-.73.083-.73 1.205.086 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.11-.775.418-1.304.76-1.604-2.665-.304-5.466-1.34-5.466-5.965 0-1.317.47-2.393 1.237-3.236-.124-.303-.535-1.526.117-3.176 0 0 1.008-.322 3.3 1.233a11.49 11.49 0 0 1 3.004-.403c1.02.004 2.048.138 3.003.403 2.29-1.555 3.296-1.233 3.296-1.233.654 1.65.243 2.873.12 3.176.77.843 1.236 1.919 1.236 3.236 0 4.637-2.805 5.658-5.478 5.955.43.37.813 1.102.813 2.22v3.292c0 .322.218.7.825.58A12.01 12.01 0 0 0 24 12c0-6.627-5.373-12-12-12Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1zEc3VShgUdWzysgkotcThHcSvJFV8Amr/view?usp=sharing"
+              target="_blank"
+              class="bg-white text-black px-4 py-2 rounded-lg hover:bg-gray-200 transition"
+            >
+              Read.cv
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Avatar -->
+        <div class="flex-1 flex justify-center relative z-10">
+          <div
+            class="relative w-64 h-64 md:w-80 md:h-80 bg-[#111111] rounded-2xl overflow-hidden flex items-center justify-center shadow-lg"
+          >
+            <!-- Starry Background -->
             <div class="absolute inset-0 star-field">
               <div class="stars"></div>
               <div class="stars twinkling"></div>
             </div>
+            <!-- Avatar -->
+            <img
+              src="./Img/Emal.png"
+              alt="Emal Avatar"
+              class="relative z-10 w-full h-full object-contain"
+            />
           </div>
-
-          <!-- Profile Picture -->
-          <img
-            src="./Img/Emal.png"
-            alt="Emal Yaditha"
-            class="relative w-full h-full object-cover rounded-lg shadow-xl border-2 border-gray-700 hover:border-blue-400 transition-all duration-300 z-10"
-          />
         </div>
 
-        <!-- Starry Sky Styles -->
-        <style>
-          /* Star Field Background */
-          .star-field {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-          }
+        <!-- Decorative Glow or Light -->
+        <div
+          class="absolute top-[-80px] left-[-80px] w-96 h-96 bg-blue-500 opacity-10 blur-3xl rounded-full pointer-events-none"
+        ></div>
+      </div>
 
-          .stars {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: black;
-            background-image: radial-gradient(
-                1px 1px at 2px 30px,
-                white,
-                transparent
-              ),
-              radial-gradient(2px 1px at 40px 70px, white, transparent),
-              radial-gradient(1px 1px at 80px 40px, white, transparent),
-              radial-gradient(1px 1px at 120px 80px, white, transparent),
-              radial-gradient(1px 1px at 160px 20px, white, transparent),
-              radial-gradient(1px 1px at 30px 120px, white, transparent),
-              radial-gradient(1px 1px at 70px 150px, white, transparent),
-              radial-gradient(1px 1px at 110px 60px, white, transparent);
-            background-repeat: repeat;
-            background-size: 200px 200px;
-            opacity: 0.7;
-          }
-
-          .stars.twinkling {
-            background-image: radial-gradient(
-                1px 1px at 10px 50px,
-                white,
-                transparent
-              ),
-              radial-gradient(1px 1px at 50px 100px, white, transparent),
-              radial-gradient(1px 1px at 90px 20px, white, transparent),
-              radial-gradient(1px 1px at 130px 70px, white, transparent),
-              radial-gradient(1px 1px at 170px 40px, white, transparent);
-            animation: twinkle 4s ease-in-out infinite alternate;
-          }
-
-          /* Twinkle Animation */
-          @keyframes twinkle {
-            0%,
-            100% {
-              opacity: 0.2;
-            }
-            50% {
-              opacity: 0.8;
-            }
-          }
-        </style>
-        <!-- Text Content -->
-        <div class="flex-1">
-          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-            Hey. I'm <span class="text-blue-400">Emal Yaditha</span>.
-          </h1>
-          <h2 class="text-3xl md:text-4xl font-bold text--400 mt-2">
-            Software Engineer | Application Support Engineer
-          </h2>
-
-          <p class="mt-8 text-xl text-gray-400 max-w-3xl leading-relaxed">
-            Passionate about building robust, scalable software solutions
-            through clean code and innovative engineering
-          </p>
-
-          <p class="mt-6 text-lg text-gray-300 max-w-3xl leading-relaxed">
-            Welcome to my portfolio! I'm a full-stack developer specializing in
-            end-to-end system architecture and application support. I combine
-            technical expertise with problem-solving skills to deliver
-            efficient, maintainable solutions.
-          </p>
-
-          <a
-            href="https://drive.google.com/file/d/1zEc3VShgUdWzysgkotcThHcSvJFV8Amr/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button
-              class="mt-8 px-8 py-3.5 bg-blue-500 hover:bg-blue-600 rounded-md text-white font-medium transition-all hover:scale-105"
-            >
-              Download CV
-            </button>
-          </a>
+      <!-- Clients Section -->
+      <div class="text-center text-gray-500 mt-12">
+        Worked with the best of the best
+        <div class="flex justify-center items-center flex-wrap gap-6 mt-4">
+          <img
+            src="./Img/Sumathi-removebg-preview.png"
+            alt="Pulse"
+            class="h-20"
+          />
+          <img
+            src="./Img/RetailIT-removebg-preview.png"
+            alt="Stewart Online"
+            class="h-20"
+          />
+          <!-- <img src="sunday-morning.png" alt="Sunday Morning" class="h-8" />
+          <img src="macrolabs.png" alt="Macrolabs" class="h-8" />
+          <img src="adder.png" alt="Adder" class="h-8" /> -->
         </div>
       </div>
+
+      <!-- Star CSS -->
+      <style>
+        .star-field {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+        }
+
+        .stars {
+          background-image: radial-gradient(
+              1px 1px at 2px 30px,
+              white,
+              transparent
+            ),
+            radial-gradient(2px 1px at 40px 70px, white, transparent),
+            radial-gradient(1px 1px at 80px 40px, white, transparent),
+            radial-gradient(1px 1px at 120px 80px, white, transparent),
+            radial-gradient(1px 1px at 160px 20px, white, transparent),
+            radial-gradient(1px 1px at 30px 120px, white, transparent);
+          background-size: 200px 200px;
+          background-repeat: repeat;
+          opacity: 0.3;
+          width: 100%;
+          height: 100%;
+        }
+
+        .stars.twinkling {
+          animation: twinkle 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes twinkle {
+          0%,
+          100% {
+            opacity: 0.2;
+          }
+          50% {
+            opacity: 0.8;
+          }
+        }
+      </style>
     </section>
 
     <!-- Skills Showcase Section -->
@@ -429,24 +447,26 @@
         soul of efficiency”
       </p>
       <p class="mt-4 text-sm text-gray-500">
-        Emal Yaditha<br /><span id="currentDate"></span> • Local Time
+        Emal Yaditha<br /><span id="currentDateTime"></span> • Local Time
       </p>
 
       <script>
-        // Function to format and display current date
-        function displayCurrentDate() {
+        function updateDateTime() {
+          const now = new Date();
           const options = {
             year: "numeric",
             month: "long",
             day: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: true,
           };
-          const today = new Date();
-          document.getElementById("currentDate").textContent =
-            today.toLocaleDateString("en-US", options);
+          const formatted = now.toLocaleString(undefined, options);
+          document.getElementById("currentDateTime").textContent = formatted;
         }
 
-        // Call the function when page loads
-        window.onload = displayCurrentDate;
+        updateDateTime();
+        setInterval(updateDateTime, 1000); // updates every second
       </script>
 
       <div class="flex justify-center space-x-8 mt-8">
