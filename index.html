@@ -13,14 +13,17 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    <!-- Add Satoshi font from CDN -->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap" rel="stylesheet">
     <style>
       body {
         background-color: #0d0d0d;
+        font-family: 'Satoshi', sans-serif;
       }
     </style>
   </head>
 
-  <body class="text-white font-sans">
+  <body class="text-white">
         <style>
         * {
             margin: 0;
@@ -29,7 +32,7 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
             background: #0d0d0d;
             color: white;
             min-height: 100vh;
@@ -48,7 +51,7 @@
             position: relative;
             z-index: 10;
         }
-
+        
         .header-content {
             display: flex;
             justify-content: space-between;
@@ -61,16 +64,20 @@
             gap: 15px;
         }
 
-        .profile-pic {
-            width: 50px;
-            height: 50px;
+        /* Ultra-small version (not recommended) */
+        .profile-pic-container {
+            width: 20px;
+            height: 10px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #000000 0%, #000000 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 1px;
+        }
+
+        .profile-pic {
+            width: 7%;
+            height: 7%;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
         .profile-info h1 {
@@ -103,7 +110,7 @@
 
         /* Main Content */
         main {
-            padding: 60px 0;
+            padding: 2px 0;
             position: relative;
         }
 
@@ -119,19 +126,20 @@
         }
 
         .hero-text h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 30px;
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-text h2 .highlight {
-            color: #4facfe;
-        }
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      color: white; /* Set default text color to white */
+    }
+    
+    .hero-text h2 .highlight {
+      color: #4facfe; /* This will make the highlighted text blue */
+      background: none; /* Remove any gradient background */
+      -webkit-background-clip: initial;
+      -webkit-text-fill-color: initial;
+      background-clip: initial;
+    }
 
         .hero-description {
             font-size: 16px;
@@ -316,7 +324,7 @@
             
             .header-content {
                 flex-direction: column;
-                gap: 20px;
+                gap: 0px;
                 text-align: center;
             }
             
@@ -397,14 +405,14 @@
         <header>
             <div class="header-content">
                 <div class="profile">
-                    <div class="profile-pic">👋</div>
+                    <img src="./Img/Profile.png" alt="Profile Photo" class="profile-pic">
                     <div class="profile-info">
                         <h1>Hey 👋, I'm Emal Yaditha.</h1>
                         <p>Software Engineer</p>
                     </div>
                 </div>
                 <nav class="nav-links">
-                   <a href="https://linkedin.com/in/emalyaditha" target="_blank" class="border border-gray-600 px-4 py-2 rounded-lg hover:bg-gray-800 transition">in</a>
+                   <a href="https://linkedin.com/in/emalyaditha" target="_blank" class="border border-gray-600 px-4 py-2 rounded-lg hover:bg-gray-800 transition">ln</a>
 <a href="https://github.com/emalyaditha" target="_blank" class="border border-gray-600 px-4 py-2 rounded-lg hover:bg-gray-800 transition flex items-center gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 0C5.37 0 0 5.373 0 12a12.01 12.01 0 0 0 8.207 11.387c.6.113.82-.263.82-.582v-2.1c-3.338.727-4.042-1.612-4.042-1.612-.546-1.385-1.332-1.754-1.332-1.754-1.09-.745.083-.73.083-.73 1.205.086 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.11-.775.418-1.304.76-1.604-2.665-.304-5.466-1.34-5.466-5.965 0-1.317.47-2.393 1.237-3.236-.124-.303-.535-1.526.117-3.176 0 0 1.008-.322 3.3 1.233a11.49 11.49 0 0 1 3.004-.403c1.02.004 2.048.138 3.003.403 2.29-1.555 3.296-1.233 3.296-1.233.654 1.65.243 2.873.12 3.176.77.843 1.236 1.919 1.236 3.236 0 4.637-2.805 5.658-5.478 5.955.43.37.813 1.102.813 2.22v3.292c0 .322.218.7.825.58A12.01 12.01 0 0 0 24 12c0-6.627-5.373-12-12-12Z"></path>
@@ -422,7 +430,7 @@
                 <div class="hero-text">
                     <h2>
                         <span class="highlight">Building</span> scalable solutions,<br>
-                        ne line of code at a<br>
+                        one line of code at a<br>
                         <span class="highlight">time.</span>
                     </h2>
                     <p class="hero-description">
@@ -432,7 +440,7 @@
                 
                 <div class="image-container">
                     <div class="image-bg"></div>
-                    <img src="./Img/Emal.png" alt="Nirmitha" class="profile-image">
+                    <img src="./Img/Emal.png" alt="emal" class="profile-image">
                 </div>
             </div>            
         </main>
