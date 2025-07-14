@@ -64,18 +64,9 @@
             gap: 15px;
         }
 
-        /* Ultra-small version (not recommended) */
-        .profile-pic-container {
-            width: 20px;
-            height: 10px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 1px;
-        }
-
         .profile-pic {
-            width: 7%;
-            height: 7%;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             object-fit: cover;
         }
@@ -93,7 +84,7 @@
 
         .nav-links {
             display: flex;
-            gap: 30px;
+            gap: 15px;
         }
 
         .nav-links a {
@@ -130,12 +121,12 @@
       font-weight: 700;
       line-height: 1.2;
       margin-bottom: 30px;
-      color: white; /* Set default text color to white */
+      color: white;
     }
     
     .hero-text h2 .highlight {
-      color: #4facfe; /* This will make the highlighted text blue */
-      background: none; /* Remove any gradient background */
+      color: #4facfe;
+      background: none;
       -webkit-background-clip: initial;
       -webkit-text-fill-color: initial;
       background-clip: initial;
@@ -220,19 +211,6 @@
 
         .company-logo:hover img {
             filter: grayscale(0%) brightness(1);
-        }
-
-        /* Company placeholders */
-        .company-logo::before {
-            content: attr(data-company);
-            font-size: 14px;
-            font-weight: 600;
-            color: #666;
-            transition: color 0.3s ease;
-        }
-
-        .company-logo:hover::before {
-            color: #4facfe;
         }
 
         /* Background particles */
@@ -324,8 +302,27 @@
             
             .header-content {
                 flex-direction: column;
-                gap: 0px;
+                gap: 20px;
                 text-align: center;
+                align-items: center;
+            }
+            
+            .profile {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .profile-pic {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 10px;
+            }
+            
+            .nav-links {
+                justify-content: center;
+                width: 100%;
+                flex-wrap: wrap;
             }
             
             .hero-section {
