@@ -21,219 +21,546 @@
   </head>
 
   <body class="text-white font-sans">
-    <!-- Hero Section -->
-    <section class="min-h-screen bg-black text-white font-sans py-20 px-6">
-      <div
-        class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16 bg-[#0d0d0d] p-10 rounded-3xl shadow-2xl relative overflow-hidden"
-      >
-        <!-- Left: Text & CTA -->
-        <div class="flex-1">
-          <div class="text-sm text-gray-300 mb-2 flex items-center gap-2">
-            <span>👋</span>
-            <span>Hey, I’m <strong class="text-white">Emal.</strong></span>
-          </div>
-          <h1
-            class="text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-6"
-          >
-            <span class="text-blue-500">Building</span> scalable solutions,<br />
-            one line of code at a<br />
-            <span class="text-blue-500">time.</span>
-          </h1>
-          <p class="text-lg text-gray-400 mb-6">
-            Hey, I am a Software Engineer with over 2 years of experience
-            building and supporting innovative software solutions. My passion
-            lies in crafting scalable and efficient systems, driven by my
-            never-giving-up attitude and excellent communication skills.
-          </p>
-          <!-- CTA Buttons -->
-          <div class="flex gap-3">
-            <a
-              href="https://linkedin.com/in/emalyaditha"
-              target="_blank"
-              class="border border-gray-600 px-4 py-2 rounded-lg hover:bg-gray-800 transition"
-              >in</a
-            >
-            <a
-              href="https://github.com/emalyaditha"
-              target="_blank"
-              class="border border-gray-600 px-4 py-2 rounded-lg hover:bg-gray-800 transition flex items-center gap-2"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-5 h-5"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 0C5.37 0 0 5.373 0 12a12.01 12.01 0 0 0 8.207 11.387c.6.113.82-.263.82-.582v-2.1c-3.338.727-4.042-1.612-4.042-1.612-.546-1.385-1.332-1.754-1.332-1.754-1.09-.745.083-.73.083-.73 1.205.086 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.11-.775.418-1.304.76-1.604-2.665-.304-5.466-1.34-5.466-5.965 0-1.317.47-2.393 1.237-3.236-.124-.303-.535-1.526.117-3.176 0 0 1.008-.322 3.3 1.233a11.49 11.49 0 0 1 3.004-.403c1.02.004 2.048.138 3.003.403 2.29-1.555 3.296-1.233 3.296-1.233.654 1.65.243 2.873.12 3.176.77.843 1.236 1.919 1.236 3.236 0 4.637-2.805 5.658-5.478 5.955.43.37.813 1.102.813 2.22v3.292c0 .322.218.7.825.58A12.01 12.01 0 0 0 24 12c0-6.627-5.373-12-12-12Z"
-                />
-              </svg>
-            </a>
-            <a
-              href="https://drive.google.com/file/d/1zEc3VShgUdWzysgkotcThHcSvJFV8Amr/view?usp=sharing"
-              target="_blank"
-              class="bg-white text-black px-4 py-2 rounded-lg hover:bg-gray-200 transition"
-            >
-              Read.cv
-            </a>
-          </div>
-        </div>
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        <!-- Right: Avatar -->
-        <div class="flex-1 flex justify-center relative z-10">
-          <div
-            class="relative w-64 h-64 md:w-80 md:h-80 bg-[#111111] rounded-2xl overflow-hidden flex items-center justify-center shadow-lg"
-          >
-            <!-- Starry Background -->
-            <div class="absolute inset-0 star-field">
-              <div class="stars"></div>
-              <div class="stars twinkling"></div>
-            </div>
-            <!-- Avatar -->
-            <img
-              src="./Img/Emal.png"
-              alt="Emal Avatar"
-              class="relative z-10 w-full h-full object-contain"
-            />
-          </div>
-        </div>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #0d0d0d;
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-        <!-- Decorative Glow or Light -->
-        <div
-          class="absolute top-[-80px] left-[-80px] w-96 h-96 bg-blue-500 opacity-10 blur-3xl rounded-full pointer-events-none"
-        ></div>
-      </div>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-      <!-- Clients Section -->
-      <div class="text-center text-gray-500 mt-12">
-        Worked with the best of the best
-        <div class="flex justify-center items-center flex-wrap gap-6 mt-4">
-          <img
-            src="./Img/Sumathi-removebg-preview.png"
-            alt="Pulse"
-            class="h-20"
-          />
-          <img
-            src="./Img/RetailIT-removebg-preview.png"
-            alt="Stewart Online"
-            class="h-20"
-          />
-          <!-- <img src="sunday-morning.png" alt="Sunday Morning" class="h-8" />
-          <img src="macrolabs.png" alt="Macrolabs" class="h-8" />
-          <img src="adder.png" alt="Adder" class="h-8" /> -->
-        </div>
-      </div>
+        /* Header */
+        header {
+            padding: 40px 0;
+            position: relative;
+            z-index: 10;
+        }
 
-      <!-- Star CSS -->
-      <style>
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #000000 0%, #000000 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .profile-info h1 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .profile-info p {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 12px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #4facfe;
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px 0;
+            position: relative;
+        }
+
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text {
+            max-width: 500px;
+        }
+
+        .hero-text h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text h2 .highlight {
+            color: #4facfe;
+        }
+
+        .hero-description {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+
+        /* Image Container */
+        .image-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+
+        .profile-image {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+        }
+
+        .image-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(79, 172, 254, 0.1) 0%, rgba(79, 172, 254, 0.05) 50%, transparent 100%);
+            border-radius: 50%;
+        }
+
+        /* Companies Section */
+        .companies-section {
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .companies-text {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .companies-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            align-items: center;
+            opacity: 0.6;
+        }
+
+        .company-logo {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .company-logo:hover {
+            opacity: 1;
+        }
+
+        .company-logo img {
+            max-width: 100px;
+            height: auto;
+            filter: grayscale(100%) brightness(0.8);
+            transition: filter 0.3s ease;
+        }
+
+        .company-logo:hover img {
+            filter: grayscale(0%) brightness(1);
+        }
+
+        /* Company placeholders */
+        .company-logo::before {
+            content: attr(data-company);
+            font-size: 14px;
+            font-weight: 600;
+            color: #666;
+            transition: color 0.3s ease;
+        }
+
+        .company-logo:hover::before {
+            color: #4facfe;
+        }
+
+        /* Background particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #4facfe;
+            border-radius: 50%;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* Star Field */
         .star-field {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          z-index: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
         }
 
         .stars {
-          background-image: radial-gradient(
-              1px 1px at 2px 30px,
-              white,
-              transparent
+            background-image: radial-gradient(
+                1px 1px at 2px 30px,
+                white,
+                transparent
             ),
             radial-gradient(2px 1px at 40px 70px, white, transparent),
             radial-gradient(1px 1px at 80px 40px, white, transparent),
             radial-gradient(1px 1px at 120px 80px, white, transparent),
             radial-gradient(1px 1px at 160px 20px, white, transparent),
             radial-gradient(1px 1px at 30px 120px, white, transparent);
-          background-size: 200px 200px;
-          background-repeat: repeat;
-          opacity: 0.3;
-          width: 100%;
-          height: 100%;
+            background-size: 200px 200px;
+            background-repeat: repeat;
+            opacity: 0.3;
+            width: 100%;
+            height: 100%;
         }
 
         .stars.twinkling {
-          animation: twinkle 4s ease-in-out infinite alternate;
+            animation: twinkle 4s ease-in-out infinite alternate;
         }
 
         @keyframes twinkle {
-          0%,
-          100% {
-            opacity: 0.2;
-          }
-          50% {
-            opacity: 0.8;
-          }
+            0%, 100% {
+                opacity: 0.2;
+            }
+            50% {
+                opacity: 0.8;
+            }
         }
-      </style>
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero-section {
+                gap: 40px;
+            }
+            
+            .hero-text h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            
+            .hero-section {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+
+            .hero-text h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-description {
+                font-size: 14px;
+            }
+            
+            .image-container {
+                height: 300px;
+            }
+            
+            .profile-image {
+                max-width: 250px;
+            }
+            
+            .companies-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            
+            .company-logo img {
+                max-width: 80px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .nav-links a {
+                font-size: 14px;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .hero-text h2 {
+                font-size: 1.5rem;
+                line-height: 1.3;
+            }
+            
+            .hero-description {
+                font-size: 13px;
+                margin-bottom: 30px;
+            }
+            
+            .image-container {
+                height: 250px;
+            }
+            
+            .profile-image {
+                max-width: 200px;
+            }
+            
+            .companies-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .company-logo img {
+                max-width: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="profile">
+                    <div class="profile-pic">👋</div>
+                    <div class="profile-info">
+                        <h1>Hey 👋, I'm Emal Yaditha.</h1>
+                        <p>Software Engineer</p>
+                    </div>
+                </div>
+                <nav class="nav-links">
+                   <a href="https://linkedin.com/in/emalyaditha" target="_blank" class="border border-gray-600 px-4 py-2 rounded-lg hover:bg-gray-800 transition">in</a>
+<a href="https://github.com/emalyaditha" target="_blank" class="border border-gray-600 px-4 py-2 rounded-lg hover:bg-gray-800 transition flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0C5.37 0 0 5.373 0 12a12.01 12.01 0 0 0 8.207 11.387c.6.113.82-.263.82-.582v-2.1c-3.338.727-4.042-1.612-4.042-1.612-.546-1.385-1.332-1.754-1.332-1.754-1.09-.745.083-.73.083-.73 1.205.086 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.11-.775.418-1.304.76-1.604-2.665-.304-5.466-1.34-5.466-5.965 0-1.317.47-2.393 1.237-3.236-.124-.303-.535-1.526.117-3.176 0 0 1.008-.322 3.3 1.233a11.49 11.49 0 0 1 3.004-.403c1.02.004 2.048.138 3.003.403 2.29-1.555 3.296-1.233 3.296-1.233.654 1.65.243 2.873.12 3.176.77.843 1.236 1.919 1.236 3.236 0 4.637-2.805 5.658-5.478 5.955.43.37.813 1.102.813 2.22v3.292c0 .322.218.7.825.58A12.01 12.01 0 0 0 24 12c0-6.627-5.373-12-12-12Z"></path>
+              </svg>
+            </a>
+			<a href="https://drive.google.com/file/d/1zEc3VShgUdWzysgkotcThHcSvJFV8Amr/view?usp=sharing" target="_blank" class="border border-gray-600 px-4 py-2 rounded-lg hover:bg-gray-800 transition flex items-center gap-2">
+              Read.cv
+            </a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div class="hero-section">
+                <div class="hero-text">
+                    <h2>
+                        <span class="highlight">Building</span> scalable solutions,<br>
+                        ne line of code at a<br>
+                        <span class="highlight">time.</span>
+                    </h2>
+                    <p class="hero-description">
+                        Hey, I am a Software Engineer with over 2 years of experience building and supporting innovative software solutions. My passion lies in crafting scalable and efficient systems, driven by my never-giving-up attitude and excellent communication skills.
+                    </p>
+                </div>
+                
+                <div class="image-container">
+                    <div class="image-bg"></div>
+                    <img src="./Img/Emal.png" alt="Nirmitha" class="profile-image">
+                </div>
+            </div>            
+        </main>
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 50;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 3 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Initialize particles when page loads
+        document.addEventListener('DOMContentLoaded', createParticles);
+
+        // Add smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <!-- Clients Section -->
+    <section style="background-color: #0d0d0d; position: relative;">
+        <div class="star-field">
+            <div class="stars twinkling"></div>
+        </div>
+        <div class="text-center text-gray-500 py-12">
+            Worked with the best of the best
+            <div class="flex justify-center items-center flex-wrap gap-6 mt-4">
+                <img
+                    src="./Img/Sumathi-removebg-preview.png"
+                    alt="Pulse"
+                    class="h-20"
+                />
+                <img
+                    src="./Img/RetailIT-removebg-preview.png"
+                    alt="Stewart Online"
+                    class="h-20"
+                />
+            </div>
+        </div>
     </section>
 
     <!-- Skills Showcase Section -->
-    <section class="py-10 text-center border-t border-gray-800">
+    <section class="py-10 px-4 sm:px-6 text-center border-t border-gray-800" style="background-color: #0d0d0d;">
       <p class="text-gray-400 text-sm uppercase tracking-widest mb-2">
         Technical Expertise
       </p>
-      <h3 class="text-xl font-semibold text-blue-400 mb-6">
+      <h3 class="text-lg sm:text-xl font-semibold text-blue-400 mb-6">
         Proficient in Modern Technologies
       </h3>
-      <div class="flex justify-center gap-8 mt-6 flex-wrap items-center">
+      <div class="flex justify-center gap-4 sm:gap-8 mt-6 flex-wrap items-center max-w-4xl mx-auto">
         <!-- Language/Tech Icons -->
         <div class="flex flex-col items-center group">
           <i
-            class="fab fa-cuttlefish text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
+            class="fab fa-cuttlefish text-2xl sm:text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
           ></i>
           <span class="text-xs mt-2 opacity-80">C++</span>
         </div>
         <div class="flex flex-col items-center group">
           <i
-            class="fab fa-microsoft text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
+            class="fab fa-microsoft text-2xl sm:text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
           ></i>
           <span class="text-xs mt-2 opacity-80">C#</span>
         </div>
         <div class="flex flex-col items-center group">
           <i
-            class="fab fa-php text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
+            class="fab fa-php text-2xl sm:text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
           ></i>
           <span class="text-xs mt-2 opacity-80">PHP</span>
         </div>
         <div class="flex flex-col items-center group">
           <i
-            class="fab fa-laravel text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
+            class="fab fa-laravel text-2xl sm:text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
           ></i>
           <span class="text-xs mt-2 opacity-80">Laravel</span>
         </div>
         <div class="flex flex-col items-center group">
           <i
-            class="fab fa-java text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
+            class="fab fa-java text-2xl sm:text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
           ></i>
           <span class="text-xs mt-2 opacity-80">Java</span>
         </div>
         <div class="flex flex-col items-center group">
           <i
-            class="fab fa-js-square text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
+            class="fab fa-js-square text-2xl sm:text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
           ></i>
           <span class="text-xs mt-2 opacity-80">JavaScript</span>
         </div>
         <div class="flex flex-col items-center group">
           <i
-            class="fas fa-database text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
+            class="fas fa-database text-2xl sm:text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
           ></i>
           <span class="text-xs mt-2 opacity-80">SQL Server</span>
         </div>
         <div class="flex flex-col items-center group">
           <i
-            class="fas fa-database text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
+            class="fas fa-database text-2xl sm:text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
           ></i>
           <span class="text-xs mt-2 opacity-80">MySQL</span>
         </div>
         <div class="flex flex-col items-center group">
           <i
-            class="fab fa-css3-alt text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
+            class="fab fa-css3-alt text-2xl sm:text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
           ></i>
           <span class="text-xs mt-2 opacity-80">CSS3</span>
         </div>
         <div class="flex flex-col items-center group">
           <i
-            class="fa-brands fa-jira text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
+            class="fa-brands fa-jira text-2xl sm:text-4xl text-gray-400 group-hover:text-blue-400 transition-colors"
           ></i>
           <span class="text-xs mt-2 opacity-80">JIRA</span>
         </div>
@@ -241,21 +568,21 @@
     </section>
 
     <!-- About & Basic Info Section -->
-    <section class="py-16 px-6 bg-gray-950">
-      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 text-gray-300">
+    <section class="py-8 sm:py-16 px-4 sm:px-6" style="background-color: #0d0d0d;">
+      <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 text-gray-300">
         <!-- Left Column -->
         <div>
           <!-- Basic Info -->
-          <div class="mb-12">
-            <h2 class="text-3xl font-bold text-white mb-6">🧾 Basic Info</h2>
-            <ul class="space-y-3 text-sm">
+          <div class="mb-8 sm:mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">🧾 Basic Info</h2>
+            <ul class="space-y-2 sm:space-y-3 text-sm">
               <li><strong>Name:</strong> Emal Yaditha</li>
               <li><strong>Location:</strong> Colombo, Sri Lanka</li>
               <li>
                 <strong>Profession:</strong> Software Engineer | Application
                 Support Engineer
               </li>
-              <li><strong>Phone:</strong> +94 70 153 6959</li>
+              <li><strong>Phone:</strong> <a href="tel:+94701536959" class="text-blue-400 hover:underline">+94 70 153 6959</a></li>
               <li>
                 <strong>Email:</strong>
                 <a
@@ -269,9 +596,9 @@
           </div>
 
           <!-- Education -->
-          <div class="mb-12">
-            <h2 class="text-3xl font-bold text-white mb-6">🎓 Education</h2>
-            <ul class="space-y-4 text-sm">
+          <div class="mb-8 sm:mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">🎓 Education</h2>
+            <ul class="space-y-3 sm:space-y-4 text-sm">
               <li>
                 <strong>BSc (Hons) in Software Engineering</strong><br />
                 Cardiff Metropolitan University (2023 – 2024)
@@ -289,24 +616,24 @@
 
           <!-- Skills & Tools -->
           <div>
-            <h2 class="text-3xl font-bold text-white mb-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">
               🔧 Skills & Tools
             </h2>
-            <p class="text-sm leading-relaxed">
-              <strong>Languages:</strong> C++, C#, PHP, Java, JavaScript<br />
-              <strong>Frameworks:</strong> Laravel<br />
-              <strong>Databases:</strong> SQL Server, MySQL<br />
-              <strong>Web Tech:</strong> CSS3<br />
-              <strong>Tools:</strong> Notion
-            </p>
+            <div class="text-sm leading-relaxed space-y-2">
+              <p><strong>Languages:</strong> C++, C#, PHP, Java, JavaScript</p>
+              <p><strong>Frameworks:</strong> Laravel</p>
+              <p><strong>Databases:</strong> SQL Server, MySQL</p>
+              <p><strong>Web Tech:</strong> CSS3</p>
+              <p><strong>Tools:</strong> Notion</p>
+            </div>
           </div>
         </div>
 
         <!-- Right Column -->
         <div>
           <!-- Social Media -->
-          <div class="mb-12">
-            <h3 class="text-3xl font-bold text-white mb-6">🔗 Social Media</h3>
+          <div class="mb-8 sm:mb-12">
+            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">🔗 Social Media</h3>
             <ul class="space-y-2 text-sm">
               <li>
                 <a
@@ -364,29 +691,32 @@
           </div>
 
           <!-- Work Experience -->
-          <div class="mb-12">
-            <h2 class="text-3xl font-bold text-white mb-6">
+          <div class="mb-8 sm:mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">
               💼 Work Experience
             </h2>
-            <ul class="space-y-4 text-sm">
+            <ul class="space-y-3 sm:space-y-4 text-sm">
               <li>
                 <strong>Product Support Engineer</strong><br />
-                Retail Information Technologies (Pvt) Ltd (Aug 2023 – Present)
+                Retail Information Technologies (Pvt) Ltd<br />
+                <span class="text-gray-500">(Aug 2023 – Present)</span>
               </li>
               <li>
                 <strong>Software Engineer</strong><br />
-                SOMRO BPO Services (Dec 2022 – Feb 2023)
+                SOMRO BPO Services<br />
+                <span class="text-gray-500">(Dec 2022 – Feb 2023)</span>
               </li>
               <li>
                 <strong>Independent Web Developer</strong><br />
-                Self-Employed (Dec 2019 – Dec 2022)
+                Self-Employed<br />
+                <span class="text-gray-500">(Dec 2019 – Dec 2022)</span>
               </li>
             </ul>
           </div>
 
           <!-- About Me -->
           <div>
-            <h2 class="text-3xl font-bold text-white mb-6">🚀 About Me</h2>
+            <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4 sm:mb-6">🚀 About Me</h2>
             <p class="italic text-gray-400 text-sm leading-relaxed">
               "I am a Software Engineer with over 3 years of experience building
               and supporting innovative software solutions. My passion lies in
@@ -398,54 +728,24 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <!-- <section class="py-16 px-6">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="text-4xl font-semibold mb-12 text-center">
-          Recent <span class="text-blue-400">Design Ventures</span>
-        </h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          --Example Project Card--
-          <div
-            class="bg-gray-900 rounded-xl overflow-hidden shadow-lg hover:scale-105 transform transition duration-300"
-          >
-            <img
-              src="project1.jpg"
-              alt="Election 2024"
-              class="w-full h-52 object-cover"
-            />
-            <div class="p-5">
-              <h3 class="text-xl font-semibold mb-2">Election 2024</h3>
-              <p class="text-gray-400 text-sm">
-                Presidential election data visualization dashboard.
-              </p>
-            </div>
-          </div>
-          --Add more projects here--
-        </div>
-      </div>
-    </section> -->
-
     <!-- Process Section -->
-    <section class="py-16 px-6 bg-gray-950">
+    <section class="py-8 sm:py-16 px-4 sm:px-6" style="background-color: #0d0d0d;">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-10">My Process</h2>
-        <div
-          class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-sm text-gray-300"
-        >
-          <div class="bg-gray-800 rounded-lg p-5 font-semibold">EAT</div>
-          <div class="bg-gray-800 rounded-lg p-5 font-semibold">SLEEP</div>
-          <div class="bg-gray-800 rounded-lg p-5 font-semibold">CODE</div>
-          <div class="bg-gray-800 rounded-lg p-5 font-semibold">REPEAT</div>
+        <h2 class="text-2xl sm:text-3xl font-bold mb-6 sm:mb-10">My Process</h2>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 text-sm text-gray-300">
+          <div class="bg-gray-800 rounded-lg p-4 sm:p-5 font-semibold">EAT</div>
+          <div class="bg-gray-800 rounded-lg p-4 sm:p-5 font-semibold">SLEEP</div>
+          <div class="bg-gray-800 rounded-lg p-4 sm:p-5 font-semibold">CODE</div>
+          <div class="bg-gray-800 rounded-lg p-4 sm:p-5 font-semibold">REPEAT</div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center py-12 px-6 border-t border-gray-800">
-      <p class="text-xl italic">
-        Quote I Live By: “<span class="text-blue-400">Simplicity</span> is the
-        soul of efficiency”
+    <footer class="text-center py-8 sm:py-12 px-4 sm:px-6 border-t border-gray-800" style="background-color: #0d0d0d;">
+      <p class="text-lg sm:text-xl italic">
+        Quote I Live By: "<span class="text-blue-400">Simplicity</span> is the
+        soul of efficiency"
       </p>
       <p class="mt-4 text-sm text-gray-500">
         Emal Yaditha<br /><span id="currentDateTime"></span> • Local Time
@@ -470,12 +770,12 @@
         setInterval(updateDateTime, 1000); // updates every second
       </script>
 
-      <div class="flex justify-center space-x-8 mt-8">
+      <div class="flex justify-center space-x-6 sm:space-x-8 mt-6 sm:mt-8">
         <a
           href="https://twitter.com/emalyaditha"
           target="_blank"
           rel="noopener"
-          class="text-white hover:text-blue-400 text-2xl"
+          class="text-white hover:text-blue-400 text-xl sm:text-2xl"
         >
           <i class="fab fa-twitter"></i>
         </a>
@@ -483,7 +783,7 @@
           href="https://linkedin.com/in/emalyaditha"
           target="_blank"
           rel="noopener"
-          class="text-white hover:text-blue-400 text-2xl"
+          class="text-white hover:text-blue-400 text-xl sm:text-2xl"
         >
           <i class="fab fa-linkedin"></i>
         </a>
@@ -491,12 +791,12 @@
           href="https://github.com/emalyaditha"
           target="_blank"
           rel="noopener"
-          class="text-white hover:text-blue-400 text-2xl"
+          class="text-white hover:text-blue-400 text-xl sm:text-2xl"
         >
           <i class="fab fa-github"></i>
         </a>
       </div>
-      <p class="text-xs text-gray-500 mt-10">
+      <p class="text-xs text-gray-500 mt-6 sm:mt-10">
         Design & Developed by Emal Yaditha. All rights reserved.
       </p>
     </footer>
