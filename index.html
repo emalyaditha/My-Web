@@ -7,25 +7,25 @@
   <title>Emal Yaditha - Product Support Engineer</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
-  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap" rel="stylesheet" />
   <style>
     * {
       margin: 0;
       padding: 0;
-      box-sizing: border-box
+      box-sizing: border-box;
     }
 
     body {
       background: #0a0a0a;
       font-family: Satoshi, sans-serif;
       color: #fff;
-      overflow-x: hidden
+      overflow-x: hidden;
     }
 
     .glass {
-      background: rgba(0, 0, 0, .7);
+      background: rgba(0, 0, 0, 0.7);
       backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255, 255, 255, .1)
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .loading-screen {
@@ -36,12 +36,12 @@
       align-items: center;
       justify-content: center;
       z-index: 9999;
-      transition: opacity .5s
+      transition: opacity 0.5s;
     }
 
     .loading-screen.hidden {
       opacity: 0;
-      visibility: hidden
+      visibility: hidden;
     }
 
     .loader {
@@ -50,78 +50,78 @@
       border: 3px solid #333;
       border-top: 3px solid #3b82f6;
       border-radius: 50%;
-      animation: spin 1s linear infinite
+      animation: spin 1s linear infinite;
     }
 
     @keyframes spin {
       to {
-        transform: rotate(360deg)
+        transform: rotate(360deg);
       }
     }
 
     .fade-in-up {
-      animation: fadeInUp .8s cubic-bezier(.16, 1, .3, 1)
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     @keyframes fadeInUp {
       from {
         opacity: 0;
-        transform: translateY(20px)
+        transform: translateY(20px);
       }
 
       to {
         opacity: 1;
-        transform: translateY(0)
+        transform: translateY(0);
       }
     }
 
     .reveal {
       opacity: 0;
       transform: translateY(30px);
-      transition: all .8s cubic-bezier(.16, 1, .3, 1)
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .reveal.active {
       opacity: 1;
-      transform: translateY(0)
+      transform: translateY(0);
     }
 
     .hero-text {
       font-size: clamp(3.5rem, 8vw, 7rem);
       font-weight: 800;
-      line-height: 1.05
+      line-height: 1.05;
     }
 
     .section-header {
       font-size: clamp(2.5rem, 5vw, 4rem);
       font-weight: 800;
-      margin-bottom: 1rem
+      margin-bottom: 1rem;
     }
 
     .stars {
       position: absolute;
       inset: 0;
-      pointer-events: none
+      pointer-events: none;
     }
 
     .star {
       position: absolute;
       background: #fff;
       border-radius: 50%;
-      animation: twinkle 3s infinite ease-in-out
+      animation: twinkle 3s infinite ease-in-out;
     }
 
     @keyframes twinkle {
 
       0%,
       100% {
-        opacity: .3;
-        transform: scale(1)
+        opacity: 0.3;
+        transform: scale(1);
       }
 
       50% {
         opacity: 1;
-        transform: scale(1.2)
+        transform: scale(1.2);
       }
     }
 
@@ -132,7 +132,7 @@
       background: transparent;
       border: none;
       cursor: pointer;
-      padding: 5px
+      padding: 5px;
     }
 
     .mobile-menu-button span {
@@ -140,19 +140,19 @@
       height: 2px;
       background: currentColor;
       border-radius: 2px;
-      transition: all .3s ease
+      transition: all 0.3s ease;
     }
 
     .mobile-menu-button.active span:nth-child(1) {
-      transform: rotate(45deg) translate(6px, 6px)
+      transform: rotate(45deg) translate(6px, 6px);
     }
 
     .mobile-menu-button.active span:nth-child(2) {
-      opacity: 0
+      opacity: 0;
     }
 
     .mobile-menu-button.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(6px, -6px)
+      transform: rotate(-45deg) translate(6px, -6px);
     }
 
     .mobile-nav {
@@ -163,25 +163,25 @@
       width: 100%;
       padding: 20px;
       z-index: 999;
-      border-bottom: 1px solid rgba(255, 255, 255, .1);
-      background: rgba(0, 0, 0, .9);
-      backdrop-filter: blur(20px)
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(20px);
     }
 
     .mobile-nav.active {
       display: block;
-      animation: slideDown .3s ease-out
+      animation: slideDown 0.3s ease-out;
     }
 
     @keyframes slideDown {
       from {
         transform: translateY(-20px);
-        opacity: 0
+        opacity: 0;
       }
 
       to {
         transform: translateY(0);
-        opacity: 1
+        opacity: 1;
       }
     }
 
@@ -190,18 +190,18 @@
       padding: 15px 0;
       text-decoration: none;
       font-weight: 500;
-      border-bottom: 1px solid rgba(255, 255, 255, .1);
-      transition: color .3s ease;
-      color: #fff
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: color 0.3s ease;
+      color: #fff;
     }
 
-    @media (max-width:768px) {
+    @media (max-width: 768px) {
       .mobile-menu-button {
-        display: flex
+        display: flex;
       }
 
       .desktop-nav {
-        display: none !important
+        display: none !important;
       }
     }
   </style>
@@ -212,49 +212,73 @@
     <div class="loader"></div>
   </div>
   <nav class="fixed top-0 w-full z-50 glass">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center"><a href="#home"
-        class="text-2xl font-bold">Emal Yaditha.</a>
-      <div class="hidden md:flex space-x-8 desktop-nav"><a href="#work" class="hover:text-blue-400">Work</a><a
-          href="#about" class="hover:text-blue-400">About</a><a href="#experience"
-          class="hover:text-blue-400">Experience</a><a href="#contact" class="hover:text-blue-400">Contact</a></div>
-      <button class="mobile-menu-button" id="mobileMenuButton"
-        aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#home" class="text-2xl font-bold">Emal Yaditha.</a>
+      <div class="hidden md:flex space-x-8 desktop-nav">
+        <a href="#work" class="hover:text-blue-400">Work</a>
+        <a href="#about" class="hover:text-blue-400">About</a>
+        <a href="#experience" class="hover:text-blue-400">Experience</a>
+        <a href="#contact" class="hover:text-blue-400">Contact</a>
+      </div>
+      <button class="mobile-menu-button" id="mobileMenuButton" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
-  <div class="mobile-nav glass" id="mobileNav"><a href="#work" class="mobile-nav-link">Work</a><a href="#about"
-      class="mobile-nav-link">About</a><a href="#experience" class="mobile-nav-link">Experience</a><a href="#contact"
-      class="mobile-nav-link">Contact</a><a href="mailto:emalyaditha@gmail.com" class="mobile-nav-link">Let's Talk</a>
+  <div class="mobile-nav glass" id="mobileNav">
+    <a href="#work" class="mobile-nav-link">Work</a>
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#experience" class="mobile-nav-link">Experience</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <a href="mailto:emalyaditha@gmail.com" class="mobile-nav-link">Let's Talk</a>
   </div>
+
   <section id="home" class="min-h-screen flex items-center px-6 pt-20 relative overflow-hidden">
     <div class="stars" id="stars-container"></div>
     <div class="max-w-6xl mx-auto w-full fade-in-up relative z-10">
       <div class="grid md:grid-cols-2 gap-12 items-center">
         <div>
-          <div class="inline-block px-4 py-2 rounded-full bg-gray-900 mb-6 text-sm text-blue-400">👋 Hey, I'm Emal
-            Yaditha</div>
-          <h1 class="hero-text mb-6">Building<br />Digital<br />Excellence</h1>
-          <p class="text-xl text-gray-400 mb-10">Product Support Engineer specializing in SQL Database Administration,
-            ERP/HMS Systems, and scalable technical solutions.</p>
-          <div class="flex gap-4"><a href="#work"
+          <div class="inline-block px-4 py-2 rounded-full bg-gray-900 mb-6 text-sm text-blue-400">
+            👋 Hey, I'm Emal Yaditha
+          </div>
+          <h1 class="hero-text mb-6">
+            Building<br />Digital<br />Excellence
+          </h1>
+          <p class="text-xl text-gray-400 mb-10">
+            Product Support Engineer specializing in SQL Database
+            Administration, ERP/HMS Systems, and scalable technical solutions.
+          </p>
+          <div class="flex gap-4">
+            <a href="#work"
               class="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:scale-105 transition">View
-              Projects</a><a href="https://linkedin.com/in/emalyaditha"
+              Projects</a>
+            <a href="https://linkedin.com/in/emalyaditha"
               class="border border-gray-700 px-6 py-3 rounded-lg hover:bg-gray-900 transition"><i
-                class="fab fa-linkedin mr-2"></i>LinkedIn</a></div>
+                class="fab fa-linkedin mr-2"></i>LinkedIn</a>
+          </div>
         </div>
-        <div class="flex justify-end"><img src="./Img/Emal.png" alt="Emal"
-            class="rounded-3xl w-full max-w-md shadow-2xl border border-gray-800" /></div>
+        <div class="flex justify-end">
+          <img src="./Img/Emal.png" alt="Emal" class="rounded-3xl w-full max-w-md shadow-2xl border border-gray-800" />
+        </div>
       </div>
     </div>
   </section>
-  <section id="about" class="py-16 md:py-32 px-6">
+
+  <section id="about" class="py-6 md:py-12 px-6">
     <div class="max-w-6xl mx-auto">
       <h2 class="section-header mb-16">Obsessed with<br />Reliability</h2>
       <div class="grid md:grid-cols-3 gap-12">
         <div class="md:col-span-2">
-          <p class="text-xl mb-8">Hey, I'm Emal. As a <strong>Product Support Engineer</strong>, I bridge the gap
-            between complex technical systems and seamless user experiences.</p>
-          <p class="text-xl">My approach combines deep technical knowledge in <strong>SQL, SSRS, and System
-              Configuration</strong> with a problem-solving mindset.</p>
+          <p class="text-xl mb-8">
+            Hey, I'm Emal. As a <strong>Product Support Engineer</strong>, I
+            bridge the gap between complex technical systems and seamless user
+            experiences.
+          </p>
+          <p class="text-xl">
+            My approach combines deep technical knowledge in
+            <strong>SQL, SSRS, and System Configuration</strong> with a
+            problem-solving mindset.
+          </p>
         </div>
         <div class="glass rounded-2xl p-8">
           <h3 class="text-lg font-bold mb-6">Core Stack</h3>
@@ -263,124 +287,305 @@
       </div>
     </div>
   </section>
-  <section id="work" class="py-16 md:py-32 px-6 bg-black bg-opacity-30">
+
+  <section id="work" class="py-4 md:py-8 px-6 bg-black bg-opacity-30">
     <div class="max-w-6xl mx-auto">
-      <h2 class="section-header mb-16">Selected<br />Works</h2>
+      <div class="flex justify-between items-end mb-16">
+        <h2 class="section-header mb-0">Selected<br />Works</h2>
+        <a href="https://github.com/emalyaditha"
+          class="border border-gray-700 px-6 py-3 rounded-lg hover:bg-gray-900 transition mb-2"><i
+            class="fab fa-github mr-2"></i>GitHub</a>
+      </div>
       <div id="projects-container" class="grid md:grid-cols-2 gap-8"></div>
     </div>
   </section>
-  <section id="experience" class="py-16 md:py-32 px-6">
+
+  <section id="experience" class="py-4 md:py-8 px-6">
     <div class="max-w-4xl mx-auto">
       <h2 class="section-header mb-16">Career<br />Journey</h2>
       <div id="experience-container" class="space-y-12"></div>
     </div>
   </section>
-  <section id="education" class="py-16 md:py-32 px-6 bg-black bg-opacity-30">
+
+  <section id="education" class="py-6 md:py-12 px-6 bg-black bg-opacity-30">
     <div class="max-w-6xl mx-auto">
       <h2 class="section-header mb-16">Education</h2>
       <div id="education-container" class="grid md:grid-cols-2 gap-8"></div>
     </div>
   </section>
-  <section id="certifications" class="py-16 md:py-32 px-6">
+
+  <section id="certifications" class="py-6 md:py-12 px-6">
     <div class="max-w-6xl mx-auto">
       <h2 class="section-header mb-16">Certifications</h2>
       <div id="certifications-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </div>
   </section>
-  <section id="contact" class="py-16 md:py-32 px-6 text-center">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl md:text-5xl font-bold mb-8">"Simplicity is the<br />soul of efficiency"</h2>
-      <p class="text-xl text-gray-400 mb-12">Let's work together on your next project</p>
-      <a href="mailto:emalyaditha@gmail.com"
-        class="inline-block bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition">Get
-        In Touch</a>
+
+  <section id="contact" class="py-6 md:py-12 px-6 text-center">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold mb-10 leading-tight">
+        "Simplicity is the<br />soul of efficiency"
+      </h2>
+      <p class="text-2xl md:text-4xl font-bold mb-6 text-gray-300">
+        Emal Yaditha
+      </p>
+      <div class="mt-8">
+        <p class="text-lg md:text-xl font-medium mb-2" id="currentTime"></p>
+        <p class="text-gray-500 text-base">
+          Local time in Colombo, Sri Lanka
+        </p>
+      </div>
     </div>
   </section>
+
   <footer class="py-12 px-6 border-t border-gray-800">
-    <div class="max-w-6xl mx-auto text-center text-sm text-gray-500">© <span id="currentYear"></span> Emal Yaditha.
-      All
-      rights reserved.</div>
+    <div class="max-w-6xl mx-auto text-center text-sm text-gray-500">
+      Design &amp; Developed by Emal Yaditha. All rights reserved.
+    </div>
   </footer>
+
   <script>
     const d = {
-      skills: ["SQL Server", "SSRS", "Python", "FastAPI", "PHP", "Laravel", "JavaScript", "React", "HTML5/CSS3", "Git", "Docker", "Postman"],
+      skills: [
+        "SQL Server",
+        "SSRS",
+        "Python",
+        "FastAPI",
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "React",
+        "HTML5/CSS3",
+        "Git",
+        "Docker",
+        "Postman",
+      ],
       projects: [
-        { title: "Cosmetics.EM", desc: "E-commerce platform with ML-based product recommendations and Image Processing and predicting Skin diseases.", tags: ["Python", "Flask", "ML"], link: "https://github.com/emalyaditha/Cosmetics.EM", image: "./Img/Cosmetics.EM.jpeg" },
-        { title: "BlackLotus", desc: "C# application showcasing .NET ecosystem development.", tags: ["C#", ".NET"], link: "https://github.com/emalyaditha/BlackLotus", image: "./Img/BlackLotus.jpeg" },
-        { title: "EVIG", desc: "Web application with clean UI and dynamic functionality.", tags: ["PHP", "CSS"], link: "https://github.com/emalyaditha/EVIG", image: "./Img/EVIG.jpeg" },
-        { title: "Notion Calendar Sync", desc: "FastAPI app syncing Notion with Google Calendar in real-time.", tags: ["FastAPI", "Python"], link: "https://github.com/emalyaditha/NotionCalendar", image: "./Img/Notion.jpeg" }
+        {
+          title: "Cosmetics.EM",
+          desc: "E-commerce platform with ML-based product recommendations and Image Processing and predicting Skin diseases.",
+          tags: ["Python", "Flask", "ML"],
+          link: "https://github.com/emalyaditha/Cosmetics.EM",
+          image: "./Img/Cosmetics.EM.jpeg",
+        },
+        {
+          title: "BlackLotus",
+          desc: "C# application showcasing .NET ecosystem development.",
+          tags: ["C#", ".NET"],
+          link: "https://github.com/emalyaditha/BlackLotus",
+          image: "./Img/BlackLotus.jpeg",
+        },
+        {
+          title: "EVIG",
+          desc: "Web application with clean UI and dynamic functionality.",
+          tags: ["PHP", "CSS"],
+          link: "https://github.com/emalyaditha/EVIG",
+          image: "./Img/EVIG.jpeg",
+        },
+        {
+          title: "Notion Calendar Sync",
+          desc: "FastAPI app syncing Notion with Google Calendar in real-time.",
+          tags: ["FastAPI", "Python"],
+          link: "https://github.com/emalyaditha/NotionCalendar",
+          image: "./Img/Notion.jpeg",
+        },
       ],
       experience: [
-        { role: "Product Support Engineer", company: "Retail Information Technologies (Pvt) Ltd", period: "Sep 2024 – Present", desc: "Provide software support for ERP and HMS applications. Diagnose and resolve SQL database issues. Create custom SSRS reports." },
-        { role: "Software Engineer", company: "SOMRO BPO Services (Private) Limited", period: "Dec 2022 – Feb 2023", desc: "Developed web applications using Laravel and PHP. Built backend services and APIs using SpringBoot." },
-        { role: "Independent Web Developer", company: "Self-Employed", period: "Dec 2019 – Dec 2022", desc: "Delivered custom websites and web applications. Managed full project lifecycle from consultation to deployment." }
+        {
+          role: "Product Support Engineer",
+          company: "Retail Information Technologies (Pvt) Ltd",
+          period: "Sep 2024 – Present",
+          desc: "Provide software support for ERP and HMS applications. Diagnose and resolve SQL database issues. Create custom SSRS reports.",
+        },
+        {
+          role: "Software Engineer",
+          company: "SOMRO BPO Services (Private) Limited",
+          period: "Dec 2022 – Feb 2023",
+          desc: "Developed web applications using Laravel and PHP. Built backend services and APIs using SpringBoot.",
+        },
+        {
+          role: "Independent Web Developer",
+          company: "Self-Employed",
+          period: "Dec 2019 – Dec 2022",
+          desc: "Delivered custom websites and web applications. Managed full project lifecycle from consultation to deployment.",
+        },
       ],
       education: [
-        { degree: "BSc (Hons) in Software Engineering", school: "Cardiff Metropolitan University", year: "Oct 2023 – Oct 2024" },
-        { degree: "Higher National Diploma (HND)", school: "ICBT Campus", year: "Aug 2019 – Mar 2021" },
-        { degree: "Foundation in Computer Science", school: "ICBT Campus", year: "2019" },
-        { degree: "Primary & Secondary Education", school: "Lyceum International School", year: "2007 – 2018" }
+        {
+          degree: "BSc (Hons) in Software Engineering",
+          school: "Cardiff Metropolitan University",
+          year: "Oct 2023 – Oct 2024",
+        },
+        {
+          degree: "Higher National Diploma (HND)",
+          school: "ICBT Campus",
+          year: "Aug 2019 – Mar 2021",
+        },
+        {
+          degree: "Foundation in Computer Science",
+          school: "ICBT Campus",
+          year: "2019",
+        },
+        {
+          degree: "Primary & Secondary Education",
+          school: "Lyceum International School",
+          year: "2007 – 2018",
+        },
       ],
       certifications: [
-        { name: "Software Support Certification", issuer: "Retail Information Technologies", date: "Nov 2025" },
-        { name: "Python (Basic & Advanced)", issuer: "HackerRank", date: "Apr 2025" },
-        { name: "SQL (Basic to Advanced)", issuer: "HackerRank", date: "Apr 2025" },
+        {
+          name: "Software Support Certification",
+          issuer: "Retail Information Technologies",
+          date: "Nov 2025",
+        },
+        {
+          name: "Python (Basic & Advanced)",
+          issuer: "HackerRank",
+          date: "Apr 2025",
+        },
+        {
+          name: "SQL (Basic to Advanced)",
+          issuer: "HackerRank",
+          date: "Apr 2025",
+        },
         { name: "Java (Basic)", issuer: "HackerRank", date: "Sep 2024" },
-        { name: "JavaScript (Basic)", issuer: "HackerRank", date: "Sep 2024" },
-        { name: "Agile Foundations", issuer: "LinkedIn Learning", date: "Aug 2025" }
-      ]
+        {
+          name: "JavaScript (Basic)",
+          issuer: "HackerRank",
+          date: "Sep 2024",
+        },
+        {
+          name: "Agile Foundations",
+          issuer: "LinkedIn Learning",
+          date: "Aug 2025",
+        },
+      ],
     };
 
     function createStars() {
-      const c = document.getElementById('stars-container');
+      const c = document.getElementById("stars-container");
       if (!c) return;
       for (let i = 0; i < 100; i++) {
-        const s = document.createElement('div');
-        s.className = 'star';
+        const s = document.createElement("div");
+        s.className = "star";
         const sz = Math.random() * 2 + 1;
-        s.style.width = sz + 'px';
-        s.style.height = sz + 'px';
-        s.style.left = Math.random() * 100 + '%';
-        s.style.top = Math.random() * 100 + '%';
-        s.style.animationDelay = Math.random() * 3 + 's';
-        c.appendChild(s)
+        s.style.width = sz + "px";
+        s.style.height = sz + "px";
+        s.style.left = Math.random() * 100 + "%";
+        s.style.top = Math.random() * 100 + "%";
+        s.style.animationDelay = Math.random() * 3 + "s";
+        c.appendChild(s);
       }
     }
 
     function render() {
-      const skillsContainer = document.getElementById('skills-container');
-      if (skillsContainer) skillsContainer.innerHTML = d.skills.map(s => `<span class="text-xs px-3 py-1 rounded-full border border-gray-800 bg-gray-900 hover:bg-gray-800 transition">${s}</span>`).join('');
-
-      const projectsContainer = document.getElementById('projects-container');
-      if (projectsContainer) projectsContainer.innerHTML = d.projects.map(p => `<div class="project-card rounded-2xl overflow-hidden"><img src="${p.image}" alt="${p.title}" class="w-full h-56 object-cover"/><div class="p-8"><h3 class="text-2xl font-bold mb-2">${p.title}</h3><p class="text-sm text-gray-400 mb-4">${p.desc}</p><div class="flex flex-wrap gap-2">${p.tags.map(t => `<span class="text-xs px-2 py-1 rounded bg-gray-800 text-gray-400">${t}</span>`).join('')}</div></div></div>`).join('');
-
-      const expContainer = document.getElementById('experience-container');
-      if (expContainer) expContainer.innerHTML = d.experience.map(e => `<div class="border-l-2 border-blue-500 pl-6"><div class="flex justify-between mb-2"><h3 class="text-xl font-bold">${e.role}</h3><span class="text-sm text-gray-500">${e.period}</span></div><p class="text-blue-400 mb-3">${e.company}</p><p class="text-gray-400">${e.desc}</p></div>`).join('');
-
-      const eduContainer = document.getElementById('education-container');
-      if (eduContainer) eduContainer.innerHTML = d.education.map(edu => `<div class="p-6 rounded-xl border-l-4 border-blue-500 bg-gray-900 hover:bg-gray-800 transition"><h4 class="font-bold text-lg">${edu.degree}</h4><p class="text-gray-400">${edu.school}</p><span class="text-xs text-gray-500 mt-2 block">${edu.year}</span></div>`).join('');
-
-      const certContainer = document.getElementById('certifications-container');
-      if (certContainer) certContainer.innerHTML = d.certifications.map(c => `<div class="flex items-center justify-between p-4 bg-gray-900 rounded-lg border border-gray-800 hover:border-gray-600 transition"><div><h4 class="font-bold text-sm">${c.name}</h4><p class="text-xs text-gray-500">${c.issuer}</p></div><span class="text-xs text-gray-500">${c.date}</span></div>`).join('');
+      const skillsContainer = document.getElementById("skills-container");
+      if (skillsContainer)
+        skillsContainer.innerHTML = d.skills
+          .map(
+            (s) =>
+              `<span class="text-xs px-3 py-1 rounded-full border border-gray-800 bg-gray-900 hover:bg-gray-800 transition">${s}</span>`
+          )
+          .join("");
+      const projectsContainer = document.getElementById("projects-container");
+      if (projectsContainer)
+        projectsContainer.innerHTML = d.projects
+          .map(
+            (p) =>
+              `<div class="project-card rounded-2xl overflow-hidden group"><div class="relative overflow-hidden"><img src="${p.image
+              }" alt="${p.title
+              }" class="w-full h-56 object-cover transition duration-500 group-hover:scale-110" /><div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center"><a href="${p.link
+              }" class="bg-white text-black px-6 py-3 rounded-full font-bold hover:scale-105 transition transform translate-y-4 group-hover:translate-y-0">View Project</a></div></div><div class="p-8"><h3 class="text-2xl font-bold mb-2">${p.title
+              }</h3><p class="text-sm text-gray-400 mb-4">${p.desc
+              }</p><div class="flex flex-wrap gap-2">${p.tags
+                .map(
+                  (t) =>
+                    `<span class="text-xs px-2 py-1 rounded bg-gray-800 text-gray-400">${t}</span>`
+                )
+                .join("")}</div></div></div>`
+          )
+          .join("");
+      const expContainer = document.getElementById("experience-container");
+      if (expContainer)
+        expContainer.innerHTML = d.experience
+          .map(
+            (e) =>
+              `<div class="border-l-2 border-blue-500 pl-6"><div class="flex justify-between mb-2"><h3 class="text-xl font-bold">${e.role}</h3><span class="text-sm text-gray-500">${e.period}</span></div><p class="text-blue-400 mb-3">${e.company}</p><p class="text-gray-400">${e.desc}</p></div>`
+          )
+          .join("");
+      const eduContainer = document.getElementById("education-container");
+      if (eduContainer)
+        eduContainer.innerHTML = d.education
+          .map(
+            (edu) =>
+              `<div class="p-6 rounded-xl border-l-4 border-blue-500 bg-gray-900 hover:bg-gray-800 transition"><h4 class="font-bold text-lg">${edu.degree}</h4><p class="text-gray-400">${edu.school}</p><span class="text-xs text-gray-500 mt-2 block">${edu.year}</span></div>`
+          )
+          .join("");
+      const certContainer = document.getElementById(
+        "certifications-container"
+      );
+      if (certContainer)
+        certContainer.innerHTML = d.certifications
+          .map(
+            (c) =>
+              `<div class="flex items-center justify-between p-4 bg-gray-900 rounded-lg border border-gray-800 hover:border-gray-600 transition"><div><h4 class="font-bold text-sm">${c.name}</h4><p class="text-xs text-gray-500">${c.issuer}</p></div><span class="text-xs text-gray-500">${c.date}</span></div>`
+          )
+          .join("");
     }
 
-    window.addEventListener('load', () => {
+    window.addEventListener("load", () => {
       render();
       createStars();
       setTimeout(() => {
-        const loader = document.getElementById('loadingScreen');
-        if (loader) loader.classList.add('hidden');
-      }, 800)
+        const loader = document.getElementById("loadingScreen");
+        if (loader) loader.classList.add("hidden");
+      }, 800);
     });
 
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
-    const mobileMenuButton = document.getElementById('mobileMenuButton');
-    const mobileNav = document.getElementById('mobileNav');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    const mobileMenuButton = document.getElementById("mobileMenuButton");
+    const mobileNav = document.getElementById("mobileNav");
+    const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
     if (mobileMenuButton) {
-      mobileMenuButton.addEventListener('click', () => { mobileMenuButton.classList.toggle('active'); mobileNav.classList.toggle('active') });
-      mobileNavLinks.forEach(link => { link.addEventListener('click', () => { mobileMenuButton.classList.remove('active'); mobileNav.classList.remove('active') }) });
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenuButton.classList.toggle("active");
+        mobileNav.classList.toggle("active");
+      });
+      mobileNavLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenuButton.classList.remove("active");
+          mobileNav.classList.remove("active");
+        });
+      });
     }
+
+    function updateTime() {
+      const now = new Date();
+
+      const options = {
+        month: "long",
+        day: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true,
+        timeZone: "Asia/Colombo",
+      };
+
+      // Get formatted date+time
+      let formatted = now.toLocaleString("en-US", options);
+
+      // Convert "5:00 PM" → "5.00pm"
+      formatted = formatted.replace(/(\d+):(\d+) (\w\w)/, (match, h, m, a) => {
+        return `${h}.${m}${a.toLowerCase()}`;
+      });
+
+      formatted = formatted.replace(" at", " -");
+
+      const timeElement = document.getElementById("currentTime");
+      if (timeElement) timeElement.textContent = formatted;
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
   </script>
 </body>
 
