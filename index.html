@@ -363,7 +363,7 @@
             only works — it stays working.
           </p>
         </div>
-        <a href="#"
+        <a href="https://github.com/emalyaditha?tab=repositories" target="_blank" rel="noreferrer"
           class="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm font-medium transition-all hover:border-neon hover:text-neon">
           Browse My Work <i data-lucide="arrow-right" class="h-4 w-4"></i>
         </a>
@@ -517,28 +517,32 @@
         desc: "E-commerce platform with ML-based product recommendations and image analysis prototype.",
         img: "assets/proj-cosmetics-em.jpeg",
         tag: "Python",
-        span: "tall"
+        span: "tall",
+        link: "https://github.com/emalyaditha/Cosmetics.EM"
       },
       {
         title: "BlackLotus",
         desc: "C# application showcasing .NET ecosystem development.",
         img: "assets/proj-blacklotus.jpeg",
         tag: "C#",
-        span: "short"
+        span: "short",
+        link: "https://github.com/emalyaditha/BlackLotus"
       },
       {
         title: "EVIG",
         desc: "Web application with clean UI and dynamic functionality.",
         img: "assets/proj-evig.jpeg",
         tag: "PHP",
-        span: "short"
+        span: "short",
+        link: "https://github.com/emalyaditha/EVIG"
       },
       {
         title: "Notion Calendar Sync",
         desc: "FastAPI service syncing Notion databases with Google Calendar in near real-time.",
         img: "assets/proj-notion-calendar.jpeg",
         tag: "FastAPI",
-        span: "tall"
+        span: "tall",
+        link: "https://github.com/emalyaditha/NotionCalendar"
       },
     ];
     const steps = [
@@ -568,9 +572,9 @@
           <h3 class="font-display text-xl font-semibold tracking-tight">${p.title}</h3>
           <p class="mt-1 text-sm text-muted-foreground">${p.desc}</p>
         </div>
-        <div class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/10 transition-all group-hover:border-neon group-hover:bg-neon group-hover:text-background">
+        <a href="${p.link}" target="_blank" rel="noreferrer" class="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-white/10 transition-all group-hover:border-neon group-hover:bg-neon group-hover:text-background" aria-label="View Project on GitHub">
           <i data-lucide="arrow-up-right" class="h-4 w-4"></i>
-        </div>
+        </a>
       </div>
     </article>
   `).join('');
